@@ -6,7 +6,7 @@
 /*   By: yabad <yabad@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 19:59:08 by yabad             #+#    #+#             */
-/*   Updated: 2023/11/19 20:40:46 by yabad            ###   ########.fr       */
+/*   Updated: 2023/11/20 09:53:36 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,6 @@ int main() {
     Base*   base = generate();
     identify(base);
     identify(*base);
+    delete base;
     return (0);
 }
