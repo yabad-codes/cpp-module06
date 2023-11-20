@@ -6,7 +6,7 @@
 /*   By: yabad <yabad@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 10:14:06 by yabad             #+#    #+#             */
-/*   Updated: 2023/11/19 14:18:21 by yabad            ###   ########.fr       */
+/*   Updated: 2023/11/20 13:23:20 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <iomanip>
+# include <cfloat>
 # include <limits.h>
 
 enum scalarType {

@@ -6,7 +6,7 @@
 /*   By: yabad <yabad@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 12:33:47 by yabad             #+#    #+#             */
-/*   Updated: 2023/11/19 14:58:09 by yabad            ###   ########.fr       */
+/*   Updated: 2023/11/20 13:26:47 by yabad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,7 +133,9 @@ void    convertFloat(const std::string& input, scalarType type) {
         return ;
     }
     try {
-        float   result = std::stof(input, nullptr);
+        double   result = std::stod(input, nullptr);
+        if (result > FLT_MAX || result < FLT_MIN)
+            throw ScalarConverter::ErrorException();
         if (result - static_cast<int>(result) == 0)
             std::cout << static_cast<int>(result) << ".0f" << std::endl;
         else
@@ -150,6 +152,8 @@ void    convertDouble(const std::string& input, scalarType type) {
     }
     try {
         double  result = std::stod(input, nullptr);
+        if (result > DBL_MAX || result < DBL_MIN)
+            throw ScalarConverter::ErrorException();
         if (result - static_cast<int>(result) == 0)
             std::cout << static_cast<int>(result) << ".0" << std::endl;
         else
